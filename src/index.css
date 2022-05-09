@@ -1,13 +1,24 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Kohinoor";
+  src: url("/src/Assets/fonts/Kohinoor-Bangla/KohinoorBangla-Light.otf")
+      format("opentype"),
+    url("/src/Assets/fonts/Kohinoor-Bangla/KohinoorBangla-Regular.otf")
+      format("opentype"),
+    url("/src/Assets/fonts/Kohinoor-Bangla/KohinoorBangla-Medium.otf")
+      format("opentype"),
+    url("/src/Assets/fonts/Kohinoor-Bangla/KohinoorBangla-Semibold.otf")
+      format("opentype"),
+    url("/src/Assets/fonts/Kohinoor-Bangla/KohinoorBangla-Bold.otf")
+      format("opentype");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hind Siliguri", "sans-serif";
 }

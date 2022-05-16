@@ -14,7 +14,11 @@ const Blogs = () => {
         <section className='mt-24'>
             <div className='flex flex-col space-y-2 mx-2'>
                {
-                   blogs.map(blog =>  <BlogCard key={blog._id} blog={blog}></BlogCard>)
+                   blogs.map(blog =>  <BlogCard 
+                    key={blog._id} 
+                    blog={blog}
+                    reactions={blog.reactions}
+                    ></BlogCard>)
                }
             </div>
         </section>

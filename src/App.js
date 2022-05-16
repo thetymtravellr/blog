@@ -6,6 +6,8 @@ function App() {
     <div>
      <Routes>
        <Route path='/' element={<Home></Home>}/>
+       <Route path='/article/:' element={<Home></Home>}/>
+       <Route path='/author/:name' element={<Home></Home>}/>
      </Routes>
     </div>
   );

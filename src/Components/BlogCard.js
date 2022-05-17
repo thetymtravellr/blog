@@ -1,6 +1,6 @@
 import { EyeIcon } from "@heroicons/react/outline";
 import { PencilIcon } from "@heroicons/react/solid";
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 const BlogCard = ({ blog, reactions }) => {
@@ -15,7 +15,7 @@ const BlogCard = ({ blog, reactions }) => {
   return (
     <div className="max-w-lg w-full border mx-auto p-4">
       <div>
-        <Link to="/" className="hover:text-amber-400 duration-200 ease-in-out">
+        <Link to={`/article/${_id}`} className="hover:text-amber-400 duration-200 ease-in-out">
           <h1 onClick={increaseCount} className="w-fit text-3xl font-medium mb-2">{title}</h1>
         </Link>
         <Link to='/' className="hover:text-blue-400 duration-200 ease-in-out">

@@ -5,19 +5,22 @@ import { Link } from "react-router-dom";
 
 const BlogCard = ({ blog, reactions }) => {
 
-  const { article, author, email, tag, title, _id } = blog;
-  const shortenArticle = article.slice(0, 500);
+  const { article, author,thumb, email, tag, title, _id } = blog;
+  const shortenArticle = article?.slice(0, 500);
 
   const increaseCount = () => {
     console.log(reactions + 1);
   }
 
   return (
-    <div className="max-w-lg w-full border mx-auto p-4">
+    <div className="max-w-3xl w-full mx-auto p-4">
       <div>
         <Link to={`/article/${_id}`} className="hover:text-amber-400 duration-200 ease-in-out">
-          <h1 onClick={increaseCount} className="w-fit text-3xl font-medium mb-2">{title}</h1>
+          <h1 onClick={increaseCount} className="w-fit text-6xl font-medium mb-2">{title}</h1>
         </Link>
+        <div>
+          <img className="rounded-2xl" src={thumb} alt="" />
+        </div>
         <Link to='/' className="hover:text-blue-400 duration-200 ease-in-out">
         <p className="font-medium w-fit flex items-center space-x-2">
           <span><PencilIcon className="w-5 text-slate-400"/></span> <small>{author}</small>
